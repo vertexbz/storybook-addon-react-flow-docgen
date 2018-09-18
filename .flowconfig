@@ -2,6 +2,7 @@
 ./src/
 
 [ignore]
+./example/
 ./dist/
 ./config/
 
