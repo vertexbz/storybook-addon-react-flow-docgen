@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-react-flow-docgen",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "storybook.js addon generating documentation using react-docgen",
   "main": "dist/index.js",
   "scripts": {

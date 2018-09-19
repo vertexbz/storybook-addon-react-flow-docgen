@@ -3,7 +3,10 @@ import type { DocgenInfoType, DocgenPropType, DocgenPropsType, DefaultValueType,
 
 const escape = (str: string): string => str
     .replace(/\n/g, ' ')
-    .replace(/\|/g, '\\|');
+    // eslint-disable-next-line
+    .replace(/[\|_\]\[]/g, (match) => '\\' + match)
+    .replace(/>/g, '&gt;')
+    .replace(/</g, '&lt;');
 
 const buildValue = (value: DefaultValueType): string => '`' + escape(String(value.value)) + '`';
 
