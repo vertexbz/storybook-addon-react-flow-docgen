@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-react-flow-docgen",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "storybook.js addon generating documentation using react-docgen",
   "main": "dist/index.js",
   "scripts": {
@@ -28,6 +28,7 @@
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.3",
     "babel-plugin-codegen": "^3.0.0",
+    "babel-plugin-macros": "^2.4.1",
     "babel-plugin-react-docgen": "^2.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

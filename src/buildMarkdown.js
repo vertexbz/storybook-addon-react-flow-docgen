@@ -1,14 +1,17 @@
 // @flow
 import type { DocgenInfoType, DocgenPropType, DocgenPropsType, DefaultValueType, FlowDocgenPropType, NativeDocgenPropType } from './types';
 
-const escape = (str: string): string => str
+const escapeCell = (str: string): string => str
     .replace(/\n/g, ' ')
-    // eslint-disable-next-line
-    .replace(/[\|_\]\[]/g, (match) => '\\' + match)
-    .replace(/>/g, '&gt;')
-    .replace(/</g, '&lt;');
+    .replace(/\|/g, '\\|');
 
-const buildValue = (value: DefaultValueType): string => '`' + escape(String(value.value)) + '`';
+const escape = (str: string): string => escapeCell(str)
+    .replace(/[_\][]/g, (match: string): string => '\\' + match)
+    .replace(/>/g, '&gt;')
+    .replace(/</g, '&lt;')
+    .replace(/\*/g, '&ast;');
+
+const buildValue = (value: DefaultValueType): string => '`' + escapeCell(String(value.value)) + '`';
 
 const buildNativeType = (type: NativeDocgenPropType): string => {
     if (Array.isArray(type.value)) {
@@ -31,7 +34,7 @@ const buildProp = ([name, prop]: [string, DocgenPropType]): string => '| ' + [
     /* Type        */ prop.flowType ? buildFlowType(prop.flowType) : (prop.type ? buildNativeType(prop.type) : ''),
     /* Required    */ prop.required ? 'yes' : 'no',
     /* Default     */ prop.defaultValue ? buildValue(prop.defaultValue) : '-',
-    /* Description */ prop.description  ? escape(prop.description) : ''
+    /* Description */ prop.description  ? escapeCell(prop.description) : ''
 ].join(' | ') + ' |';
 
 const buildProps = (props: DocgenPropsType): string => `

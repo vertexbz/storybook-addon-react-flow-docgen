@@ -1,5 +1,7 @@
 {
   "plugins": [
+    "codegen",
+    "macros",
     "transform-object-rest-spread",
     "transform-class-properties"
   ],

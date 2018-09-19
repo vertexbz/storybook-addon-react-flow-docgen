@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`buildMarkdown builds correct markdown from flow type defs 1`] = `
+"
+# DemoFlow
+DemoFlow component description
+blah blah blah
+## more bla
+
+| Name | Type | Required | Default | Description |
+|------|------|:--------:|---------|-------------|
+| **prop1** | number | no | \`5\` | ~required~ optional prop1 of type number |
+| **prop2** | string \\\\| false | no | \`'*<asd>*'\` | prop2, required string \\\\|\\\\| \`false\` |
+| **prop3** | {     a: string,     b: number,     c?: ?boolean } | yes | - | prop3 required **object** |
+| **prop4** | Array&lt;{ var: string }&gt; | yes | - | prop4, required array of objects |
+| **prop5** | (Array&lt;&ast;&gt;) =&gt; void | yes | - | a *callback* |"
+`;

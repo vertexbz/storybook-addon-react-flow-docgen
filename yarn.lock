@@ -933,6 +933,12 @@ babel-plugin-macros@^2.2.0, babel-plugin-macros@^2.2.1:
   dependencies:
     cosmiconfig "^5.0.5"
 
+babel-plugin-macros@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/babel-plugin-macros/-/babel-plugin-macros-2.4.1.tgz#f6f7d9551270b2669660ed38f88ca0dc83363734"
+  dependencies:
+    cosmiconfig "^5.0.5"
+
 babel-plugin-minify-builtins@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-minify-builtins/-/babel-plugin-minify-builtins-0.3.0.tgz#4740117a6a784063aaf8f092989cf9e4bd484860"

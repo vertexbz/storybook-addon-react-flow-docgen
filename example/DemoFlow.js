@@ -4,16 +4,16 @@ import * as React from 'react';
 
 type DemoProps = {
     /**
-     * optional prop1 of type number
+     * ~required~ optional prop1 of type number
      */
     prop1?: number,
     /**
-     * prop2, required string or false
+     * prop2, required string || `false`
      */
     prop2: string | false,
     /**
      * prop3
-     * required object
+     * required **object**
      */
     prop3: {
         a: string,
@@ -25,7 +25,7 @@ type DemoProps = {
      */
     prop4: Array<{ var: string }>,
     /**
-     * a callback
+     * a *callback*
      */
     prop5: (Array<*>) => void
 };
@@ -33,7 +33,7 @@ type DemoProps = {
 /**
  * DemoFlow component description
  * blah blah blah
- * more bla
+ * ## more bla
  */
 const DemoFlow = ({ prop1 = 5, prop2, prop3, prop4 }: DemoProps): * => (
     <div style={{ backgroundColor: 'red', width: 100, height: 100 }} />

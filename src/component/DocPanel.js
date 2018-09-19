@@ -3,9 +3,9 @@ import * as React from 'react';
 import marked from 'marked';
 import { event } from '../constants';
 import buildMarkdown from '../buildMarkdown';
+import MarkdownStyle from './MarkdownStyle';
 import type { DocgenInfoType } from '../types';
-// $FlowIgnore
-import '!style-loader!css-loader!github-markdown-css/github-markdown.css';
+
 
 type DocPanelProps = {
     channel: *
@@ -55,11 +55,14 @@ export default class DocPanel extends React.Component<DocPanelProps, DocPanelSta
         }
 
         return (
-            <div
-                style={{ boxSizing: 'border-box', padding: 10, width: '100%' }}
-                className="markdown-body"
-                dangerouslySetInnerHTML={{ __html: this.buildDocHtml() }}
-            />
+            <div>
+                <MarkdownStyle />
+                <div
+                    style={{ boxSizing: 'border-box', padding: 10, width: '100%' }}
+                    className="markdown-body"
+                    dangerouslySetInnerHTML={{ __html: this.buildDocHtml() }}
+                />
+            </div>
         );
     }
 }
