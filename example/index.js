@@ -5,6 +5,7 @@ import DemoFlow from './DemoFlow';
 import DemoPropTypes from './DemoPropTypes';
 
 storiesOf('Example', module)
+    .add('No docs demo', () => <DemoFlow />)
     .addDecorator(docs())
     // eslint-disable-next-line
     .add('DemoFlow', () => <DemoFlow />)
