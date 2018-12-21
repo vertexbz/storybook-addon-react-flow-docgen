@@ -27,7 +27,8 @@ type DemoProps = {
     /**
      * a *callback*
      */
-    prop5: (Array<*>) => void
+    prop5: (Array<*>) => void,
+    prop_6: Array<*>
 };
 
 /**
@@ -35,7 +36,7 @@ type DemoProps = {
  * blah blah blah
  * ## more bla
  */
-const DemoFlow = ({ prop1 = 5, prop2, prop3, prop4 }: DemoProps): * => (
+const DemoFlow = ({ prop1 = 5, prop2, prop3, prop4, prop_6 = [] }: DemoProps): * => (
     <div style={{ backgroundColor: 'red', width: 100, height: 100 }} />
 );
 

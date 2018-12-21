@@ -6,7 +6,9 @@ const escapeCell = (str: string): string => str
     .replace(/\|/g, '\\|');
 
 const escape = (str: string): string => escapeCell(str)
-    .replace(/[_\][]/g, (match: string): string => '\\' + match)
+    .replace(/_/g, '&lowbar;')
+    .replace(/\[/g, '&lsqb;')
+    .replace(/]/g, '&rsqb;')
     .replace(/>/g, '&gt;')
     .replace(/</g, '&lt;')
     .replace(/\*/g, '&ast;');
