@@ -22,6 +22,8 @@ import 'storybook-addon-react-flow-docgen/dist/register';
 Then add a decorator to your stories:
 
 ```js
+import docs from 'storybook-addon-react-flow-docgen/dist';
+
 storiesOf('ButtonSimple')
   .addDecorator(docs())
   .add(
